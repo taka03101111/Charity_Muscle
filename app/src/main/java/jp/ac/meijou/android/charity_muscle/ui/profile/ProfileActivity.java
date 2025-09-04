@@ -11,8 +11,6 @@ import jp.ac.meijou.android.charity_muscle.base.BaseNavigationActivity;
  * - ユーザープロフィール情報の表示
  * - プロフィール編集機能
  * - アカウント設定
- *
- * チーム開発時の担当者: ユーザー管理担当開発者
  */
 public class ProfileActivity extends BaseNavigationActivity {
 

@@ -11,8 +11,6 @@ import jp.ac.meijou.android.charity_muscle.base.BaseNavigationActivity;
  * - お気に入りアイテムの表示
  * - お気に入りの追加・削除機能
  * - お気に入りリストの管理
- *
- * チーム開発時の担当者: データ管理担当開発者
  */
 public class FavoriteActivity extends BaseNavigationActivity {
 

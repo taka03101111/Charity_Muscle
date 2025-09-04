@@ -11,8 +11,6 @@ import jp.ac.meijou.android.charity_muscle.base.BaseNavigationActivity;
  * - 検索機能の実装
  * - 検索結果の表示
  * - フィルタリング機能
- *
- * チーム開発時の担当者: 検索機能担当開発者
  */
 public class SearchActivity extends BaseNavigationActivity {
 

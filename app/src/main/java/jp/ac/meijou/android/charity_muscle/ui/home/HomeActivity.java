@@ -11,8 +11,6 @@ import jp.ac.meijou.android.charity_muscle.base.BaseNavigationActivity;
  * - アプリのメイン画面表示
  * - ダッシュボード機能
  * - 主要機能へのエントリーポイント
- *
- * チーム開発時の担当者: フロントエンド開発者
  */
 public class HomeActivity extends BaseNavigationActivity {
 

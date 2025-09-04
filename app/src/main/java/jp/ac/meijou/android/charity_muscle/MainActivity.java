@@ -20,8 +20,6 @@ import jp.ac.meijou.android.charity_muscle.ui.home.HomeActivity;
  * - アプリの初期化とスプラッシュ画面表示
  * - 必要な初期設定の実行
  * - 適切なタイミングでホーム画面に遷移
- *
- * チーム開発時の担当者: 共通基盤担当開発者
  */
 public class MainActivity extends AppCompatActivity {
 
