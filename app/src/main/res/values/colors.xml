@@ -2,4 +2,29 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- グラデーション背景 -->
+    <color name="background_gradient">#FF1A1A2E</color>
+
+    <!-- テキストカラー -->
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#B3FFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+
+    <!-- 統計カード用テキストカラー -->
+    <color name="text_primary_dark">#FF333333</color>
+    <color name="text_secondary_dark">#FF666666</color>
+
+    <!-- カードカラー -->
+    <color name="card_steps">#FF6C63FF</color>
+    <color name="card_exercise">#FF00D4AA</color>
+    <color name="card_summary">#FFFFFFFF</color>
+
+    <!-- アクセントカラー -->
+    <color name="accent_primary">#FF6C63FF</color>
+    <color name="accent_secondary">#FF00D4AA</color>
+    <color name="accent_tertiary">#FFFF6B6B</color>
+
+    <!-- プログレスバー -->
+    <color name="progress_background">#33FFFFFF</color>
 </resources>

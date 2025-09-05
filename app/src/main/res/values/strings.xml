@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">Charity_Muscle</string>
+
+    <!-- ホーム画面 -->
+    <string name="home_greeting">今日も頑張りましょう！</string>
+    <string name="profile_description">プロフィール</string>
+
+    <!-- 歩数カード -->
+    <string name="today_steps">今日の歩数</string>
+    <string name="steps_icon_description">歩数アイコン</string>
+    <string name="current_steps">7,542</string>
+    <string name="steps_goal">目標: 10,000歩</string>
+
+    <!-- 運動カード -->
+    <string name="today_exercise">今日の運動量</string>
+    <string name="exercise_icon_description">運動アイコン</string>
+    <string name="calories">245</string>
+    <string name="kcal_unit">kcal</string>
+    <string name="duration">45</string>
+    <string name="minutes_unit">分</string>
+    <string name="exercise_goal_remaining">目標まであと15分</string>
+
+    <!-- 統計カード -->
+    <string name="weekly_stats">今週の統計</string>
+    <string name="total_steps_value">52,341</string>
+    <string name="total_steps_label">総歩数</string>
+    <string name="total_calories_value">1,247</string>
+    <string name="total_calories_label">総カロリー</string>
+    <string name="total_duration_value">5.2</string>
+    <string name="total_duration_label">運動時間(h)</string>
+
+    <!-- ボタン -->
+    <string name="start_workout">運動開始</string>
+    <string name="view_history">履歴表示</string>
 </resources>
