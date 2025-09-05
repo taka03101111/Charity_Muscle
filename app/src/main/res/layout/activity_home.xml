@@ -1,24 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ホーム画面"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/navigationBar"
-        app:layout_constraintEnd_toEndOf="parent"
+    android:background="#000000">
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navigationBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ダッシュボードタイトル -->
+            <TextView
+                android:id="@+id/tvDashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ダッシュボード"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- 毎日の目標 ProgressBar -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="毎日の目標"></TextView>
+
+
+            <ProgressBar
+            android:id="@+id/progressDailyGoal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:progress="60"
+            android:max="100"
+            android:progressDrawable="@android:drawable/progress_horizontal"
+            android:layout_marginVertical="8dp"/>
+
+
+            <!-- ランキング部分 -->
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全体のランキング\n歩数: 5,234 | 寄付額: ¥1,500"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <!-- グリッド形式のカード（歩数・ワークアウト・消費カロリー・寄付額） -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:rowOrderPreserved="false"
+            android:layout_marginBottom="16dp">
+
+            <!-- 歩数カード -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:background="#333"
+                android:padding="12dp"
+                android:layout_margin="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="歩数"
+                    android:textColor="@android:color/white"/>
+                <TextView
+                    android:id="@+id/tvSteps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5,234 / 10000"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- ワークアウト -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:background="#333"
+                android:padding="12dp"
+                android:layout_margin="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ワークアウトセット"
+                    android:textColor="@android:color/white"/>
+                <TextView
+                    android:id="@+id/tvWorkout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="120"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- 消費カロリー -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:background="#333"
+                android:padding="12dp"
+                android:layout_margin="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="消費kcal"
+                    android:textColor="@android:color/white"/>
+                <TextView
+                    android:id="@+id/tvCalories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="350"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+
+            <!-- 累計寄付額 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:background="#333"
+                android:padding="12dp"
+                android:layout_margin="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="累計寄付額"
+                    android:textColor="@android:color/white"/>
+                <TextView
+                    android:id="@+id/tvDonation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥1,500"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+        </GridLayout>
+
+    <!--        &lt;!&ndash; 進捗状況 &ndash;&gt;-->
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="進捗状況"-->
+    <!--            android:textColor="@android:color/white"/>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tvProgress"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="75% (+10%)"-->
+    <!--            android:textColor="@android:color/white"-->
+    <!--            android:layout_marginBottom="12dp"/>-->
+
+        <!-- 今日のオススメ -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日のオススメ"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="屋内ヨガでリフレッシュ\n室内でできるヨガで心身をリフレッシュしましょう">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <!-- 共通ナビゲーションバーを読み込み -->
     <include layout="@layout/navigation_bar" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
