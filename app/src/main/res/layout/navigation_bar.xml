@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 共通ナビゲーションバー - 全画面で再利用 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigationBar"
+    android:layout_width="0dp"
+    android:layout_height="60dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/nav_bar_background"
+    android:elevation="8dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <!-- ホームアイコン -->
+    <ImageButton
+        android:id="@+id/navHome"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/nav_icon_selector"
+        android:contentDescription="ホーム"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_home" />
+
+    <!-- 検索アイコン -->
+    <ImageButton
+        android:id="@+id/navSearch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/nav_icon_selector"
+        android:contentDescription="検索"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_search" />
+
+    <!-- お気に入りアイコン -->
+    <ImageButton
+        android:id="@+id/navFavorite"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/nav_icon_selector"
+        android:contentDescription="お気に入り"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_favorite" />
+
+    <!-- プロフィールアイコン -->
+    <ImageButton
+        android:id="@+id/navProfile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/nav_icon_selector"
+        android:contentDescription="プロフィール"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_person" />
+
+</LinearLayout>
