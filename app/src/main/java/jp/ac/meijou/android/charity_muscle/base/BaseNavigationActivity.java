@@ -9,6 +9,7 @@ import jp.ac.meijou.android.charity_muscle.ui.home.HomeActivity;
 import jp.ac.meijou.android.charity_muscle.ui.search.SearchActivity;
 import jp.ac.meijou.android.charity_muscle.ui.favorite.FavoriteActivity;
 import jp.ac.meijou.android.charity_muscle.ui.profile.ProfileActivity;
+import jp.ac.meijou.android.charity_muscle.ui.ranking.RankingActivity;
 
 /**
  * 全ての画面で共通するナビゲーションバーを持つ基底Activity
@@ -37,6 +38,7 @@ public abstract class BaseNavigationActivity extends AppCompatActivity {
         ImageButton navSearch = findViewById(R.id.navSearch);
         ImageButton navFavorite = findViewById(R.id.navFavorite);
         ImageButton navProfile = findViewById(R.id.navProfile);
+        ImageButton navRanking = findViewById(R.id.navRanking);
 
         // null チェックを追加（ナビゲーションバーがない画面でも安全）
         if (navHome != null) {
@@ -50,6 +52,9 @@ public abstract class BaseNavigationActivity extends AppCompatActivity {
         }
         if (navProfile != null) {
             navProfile.setOnClickListener(v -> navigateToProfile());
+        }
+        if (navRanking != null) {
+            navRanking.setOnClickListener(v -> navigateToRanking());
         }
     }
 
@@ -81,6 +86,12 @@ public abstract class BaseNavigationActivity extends AppCompatActivity {
     private void navigateToProfile() {
         if (!getCurrentActivityName().equals("ProfileActivity")) {
             startActivity(new Intent(this, ProfileActivity.class));
+        }
+    }
+
+    private void navigateToRanking() {
+        if (!getCurrentActivityName().equals("RankingActivity")) {
+            startActivity(new Intent(this, RankingActivity.class));
         }
     }
 }

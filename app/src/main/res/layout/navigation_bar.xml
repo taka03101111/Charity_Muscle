@@ -65,4 +65,16 @@
         android:scaleType="centerInside"
         android:src="@drawable/ic_person" />
 
+    <!-- ランキングアイコン -->
+    <ImageButton
+        android:id="@+id/navRanking"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/nav_icon_selector"
+        android:contentDescription="ランキング"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_ranking" />
+
 </LinearLayout>
